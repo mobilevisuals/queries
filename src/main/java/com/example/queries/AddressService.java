@@ -33,7 +33,7 @@ public class AddressService {
         log.info("findByCityStartingWith" + result);
         result = addressRepository.findByCityContaining("l");
         log.info("findByCityContaining" + result);
-        result = addressRepository.bothSame("Halmstad");
+        result = addressRepository.streetAndCitySame("Halmstad");
         log.info("bothSame" + result);
     }
 }

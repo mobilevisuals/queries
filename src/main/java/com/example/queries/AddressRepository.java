@@ -15,7 +15,6 @@ public interface AddressRepository extends JpaRepository<Address,Long> {
     List<Address> findByPostalCodeIsLessThan(int id);
     List<Address> findByCityStartingWith(String start);
     List<Address> findByCityContaining(String containing);
-    @Query("select o from Address o where o.streetname=?1 and o.city=?1")
-    List<Address> bothSame(String name);
+    List<Address> streetAndCitySame(String name);
 
 }
